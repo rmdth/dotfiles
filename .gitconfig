@@ -1,0 +1,14 @@
+[core]
+	editor = zed --wait
+	autocrlf = true
+[user]
+	username = rmdth
+	email = 166089650+rmdth@users.noreply.github.com
+	name = ram
+	signingkey = ~/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
