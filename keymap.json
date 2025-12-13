@@ -1,0 +1,140 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+    "bindings": {
+      "q": "vim::AnyQuotes",
+      "b": "vim::AnyBrackets"
+    }
+  },
+  {
+    "context": "Dock && !Terminal || VimControl && !menu || EmptyPane || SharedScreen || Pane && !Editor && !Terminal",
+    // Everywhere except insert and terminal
+    "bindings": {
+      "space w": "workspace::Save",
+      "space W": "workspace::SaveAll",
+      "space p": "command_palette::Toggle",
+      "space q": "pane::CloseActiveItem",
+      "space s": "pane::SplitRight",
+      "space v": "pane::SplitDown",
+      "space l": "vim::GoToTab",
+      "space h": "vim::GoToPreviousTab",
+      "space o": "workspace::Open",
+      "space n": "workspace::NewWindow",
+      "space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-t h": "workspace::ToggleLeftDock",
+      "ctrl-t l": "workspace::ToggleRightDock",
+      "ctrl-t j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Dock && !AgentPanel",
+    // Everywhere except agent panel which is on the right dock
+    "bindings": {
+      "ctrl-h": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Dock && AgentPanel",
+    "bindings": {
+      "ctrl-l": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Trash",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-t": "workspace::NewTerminal",
+      "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-space h": "pane::ActivatePreviousItem",
+      "ctrl-space l": "pane::ActivateNextItem",
+      "ctrl-[ space w": "workspace::Save",
+      "ctrl-[ space W": "workspace::SaveAll",
+      "ctrl-[ space p": "command_palette::Toggle",
+      "ctrl-[ space q": "pane::CloseActiveItem",
+      "ctrl-[ space s": "pane::SplitRight",
+      "ctrl-[ space v": "pane::SplitDown",
+      "ctrl-[ space l": "vim::GoToTab",
+      "ctrl-[ space h": "vim::GoToPreviousTab",
+      "ctrl-[ space o": "workspace::Open",
+      "ctrl-[ space n": "workspace::NewWindow",
+      "ctrl-[ space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    // Normal & visual mode.
+    "bindings": {
+      "g n": "editor::SelectNext"
+    }
+  },
+  {
+    "context": "vim_operator == c",
+    "bindings": {
+      "a": "editor::ToggleCodeActions" // Zed specific
+    }
+  },
+  {
+    "context": "Editor || menu",
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+      "tab": "menu::SelectNext",
+      "shift-tab": "menu::SelectPrevious",
+      "ctrl-[": "menu::Cancel"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "ctrl-[": "buffer_search::Dismiss",
+      "escape": "buffer_search::Dismiss"
+    }
+  }
+]
