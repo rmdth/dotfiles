@@ -55,7 +55,8 @@
       "ctrl-t j": "workspace::ToggleBottomDock",
       "ctrl-g a": ["task::Spawn", { "task_name": "Git Add Current File" }],
       "ctrl-g A": ["task::Spawn", { "task_name": "Git Add All Files" }],
-      "ctrl-g c": ["task::Spawn", { "task_name": "Git Commit" }]
+      "ctrl-g c": ["task::Spawn", { "task_name": "Git Commit" }],
+      "ctrl-g p": ["task::Spawn", { "task_name": "Git Push" }]
     }
   },
   {
