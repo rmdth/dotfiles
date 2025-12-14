@@ -53,31 +53,50 @@
   },
   {
     "label": "Git Add Current File",
-    "command": "git add",
-    "args": ["$ZED_FILE"],
-    "shell": "system",
-    "hide": "always",
-    "use_new_terminal": false
+    "command": "git",
+    "args": ["add", "$ZED_FILE"],
+    "reveal": "no_focus",
+    "hide": "on_success",
+    "shell": "system"
   },
   {
     "label": "Git Add All Files",
-    "command": "git add .",
-    "shell": "system",
-    "hide": "always",
-    "use_new_terminal": false
+    "command": "git",
+    "args": ["add", "."],
+    "reveal": "no_focus",
+    "hide": "on_success",
+    "shell": "system"
   },
   {
     "label": "Git Commit",
-    "command": "git commit",
-    "shell": "system",
-    "hide": "always",
-    "use_new_terminal": false
+    "command": "git",
+    "args": ["commit"],
+    "reveal": "no_focus",
+    "hide": "on_success",
+    "shell": "system"
   },
   {
     "label": "Git Push",
-    "command": "git push",
-    "shell": "system",
-    "hide": "always",
-    "use_new_terminal": false
+    "command": "git",
+    "args": ["push"],
+    "reveal": "no_focus",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Git Unadd All",
+    "command": "git",
+    "args": ["unadd"],
+    "reveal": "no_focus",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "Git Oops",
+    "command": "git",
+    "args": ["oops"],
+    "reveal": "no_focus",
+    "hide": "on_success",
+    "shell": "system"
   }
 ]
