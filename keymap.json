@@ -26,8 +26,8 @@
     }
   },
   {
-    "context": "Dock && !Terminal || VimControl && !menu || EmptyPane || SharedScreen || Pane && !Editor && !Terminal",
-    // Everywhere except insert and terminal
+    "context": "Dock && !Terminal && !Editor || VimControl && !menu || EmptyPane || SharedScreen || Pane && !Editor && !Terminal",
+    // Everywhere except insert, terminal and Dock while writing
     "bindings": {
       "space w": "workspace::Save",
       "space W": "workspace::SaveAll",
@@ -62,14 +62,15 @@
     }
   },
   {
-    "context": "Dock && !AgentPanel",
-    // Everywhere except agent panel which is on the right dock
+    "context": "Dock && ProjectPanel || Dock && GitPanel || Dock && OutlinePanel || Dock && CollabPanel",
+    // Every panel that is on the left dock
     "bindings": {
       "ctrl-h": "workspace::ToggleLeftDock"
     }
   },
   {
     "context": "Dock && AgentPanel",
+    // Every panel that is on the right dock
     "bindings": {
       "ctrl-l": "workspace::ToggleRightDock"
     }
@@ -91,7 +92,7 @@
     "bindings": {
       "ctrl-t": "workspace::NewTerminal",
       "ctrl-q": "pane::CloseActiveItem",
-      "ctrl-space h": "pane::ActivatePreviousItem",
+      "ctrl-space ctrl-h": "pane::ActivatePreviousItem",
       "ctrl-space l": "pane::ActivateNextItem",
       "ctrl-[ space w": "workspace::Save",
       "ctrl-[ space W": "workspace::SaveAll",
@@ -143,6 +144,12 @@
     "bindings": {
       "ctrl-[": "buffer_search::Dismiss",
       "escape": "buffer_search::Dismiss"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-space c": "editor::ShowCompletions"
     }
   }
 ]
