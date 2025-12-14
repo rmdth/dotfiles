@@ -39,14 +39,23 @@
       "space h": "vim::GoToPreviousTab",
       "space o": "workspace::Open",
       "space n": "workspace::NewWindow",
-      "space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }],
+      "space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }]
+    }
+  },
+  {
+    "context": "Dock || VimControl && !menu || EmptyPane || SharedScreen || Pane && !Editor",
+    // Everywhere except insert
+    "bindings": {
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-t h": "workspace::ToggleLeftDock",
       "ctrl-t l": "workspace::ToggleRightDock",
-      "ctrl-t j": "workspace::ToggleBottomDock"
+      "ctrl-t j": "workspace::ToggleBottomDock",
+      "ctrl-g a": ["task::Spawn", { "task_name": "Git Add Current File" }],
+      "ctrl-g A": ["task::Spawn", { "task_name": "Git Add All Files" }],
+      "ctrl-g c": ["task::Spawn", { "task_name": "Git Commit" }]
     }
   },
   {
@@ -91,11 +100,7 @@
       "ctrl-[ space h": "vim::GoToPreviousTab",
       "ctrl-[ space o": "workspace::Open",
       "ctrl-[ space n": "workspace::NewWindow",
-      "ctrl-[ space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }],
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ToggleBottomDock"
+      "ctrl-[ space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }]
     }
   },
   {
