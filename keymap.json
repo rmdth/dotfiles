@@ -21,8 +21,8 @@
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
-      "q": "vim::AnyQuotes",
-      "b": "vim::AnyBrackets"
+      "q": "vim::MiniQuotes",
+      "b": "vim::MiniBrackets"
     }
   },
   {
@@ -37,7 +37,8 @@
       "space v": "pane::SplitDown",
       "space l": "vim::GoToTab",
       "space h": "vim::GoToPreviousTab",
-      "space o": "workspace::Open",
+      "space o": "projects::OpenRecent",
+      "space O": "workspace::Open",
       "space n": "workspace::NewWindow",
       "space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }]
     }
@@ -62,7 +63,7 @@
     }
   },
   {
-    "context": "Dock && ProjectPanel || Dock && GitPanel || Dock && OutlinePanel || Dock && CollabPanel",
+    "context": "Dock && !AgentPanel && !Terminal && !DebugPanel",
     // Every panel that is on the left dock
     "bindings": {
       "ctrl-h": "workspace::ToggleLeftDock"
@@ -84,7 +85,8 @@
       "d": "project_panel::Trash",
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
-      "p": "project_panel::Paste"
+      "p": "project_panel::Paste",
+      "l": "project_panel::OpenPermanent"
     }
   },
   {
@@ -92,6 +94,7 @@
     "bindings": {
       "ctrl-t": "workspace::NewTerminal",
       "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-j": "workspace::ToggleBottomDock",
       "ctrl-space h": "pane::ActivatePreviousItem",
       "ctrl-space l": "pane::ActivateNextItem",
       "ctrl-[ space w": "workspace::Save",
@@ -105,6 +108,12 @@
       "ctrl-[ space o": "workspace::Open",
       "ctrl-[ space n": "workspace::NewWindow",
       "ctrl-[ space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }]
+    }
+  },
+  {
+    "context": "DebugPanel",
+    "bindings": {
+      "ctrl-j": "workspace::ToggleBottomDock"
     }
   },
   {
