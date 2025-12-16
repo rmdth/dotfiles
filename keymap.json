@@ -60,7 +60,9 @@
       "ctrl-g c": ["task::Spawn", { "task_name": "Git Commit" }],
       "ctrl-g p": ["task::Spawn", { "task_name": "Git Push" }],
       "ctrl-g U": ["task::Spawn", { "task_name": "Git Unadd All" }],
-      "ctrl-g o": ["task::Spawn", { "task_name": "Git Oops" }]
+      "ctrl-g o": ["task::Spawn", { "task_name": "Git Oops" }],
+      "ctrl-G a": "git::Add",
+      "ctrl-G c": "git::Commit"
     }
   },
   {
@@ -117,6 +119,27 @@
     "context": "DebugPanel",
     "bindings": {
       "ctrl-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {
+      "ctrl-g a": "git::StageAndNext",
+      "ctrl-g A": "git::UnstageAndNext",
+      "ctrl-g c": "git::Commit",
+      "ctrl-g r": "git::Restore"
+    }
+  },
+  {
+    "context": "GitPanel && CommitEditor",
+    "bindings": {
+      "ctrl-[": "git::Cancel"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "ctrl-g c": "git::Commit"
     }
   },
   {
