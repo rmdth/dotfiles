@@ -66,6 +66,14 @@
     }
   },
   {
+    "context": "Terminal || (BufferSearchBar > Editor)",
+    "bindings": {
+      "ctrl-space h": "pane::ActivatePreviousItem",
+      "ctrl-space l": "pane::ActivateNextItem",
+      "ctrl-q": "pane::CloseActiveItem"
+    }
+  },
+  {
     "context": "Dock && !AgentPanel && !Terminal && !DebugPanel",
     // Every panel that is on the left dock
     "bindings": {
