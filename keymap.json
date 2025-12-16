@@ -107,7 +107,8 @@
       "ctrl-[ space v": "pane::SplitDown",
       "ctrl-[ space l": "vim::GoToTab",
       "ctrl-[ space h": "vim::GoToPreviousTab",
-      "ctrl-[ space o": "workspace::Open",
+      "ctrl-[ space o": "projects::OpenRecent",
+      "ctrl-[ space O": "workspace::Open",
       "ctrl-[ space n": "workspace::NewWindow",
       "ctrl-[ space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }]
     }
