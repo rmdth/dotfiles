@@ -98,5 +98,13 @@
     "reveal": "no_focus",
     "hide": "on_success",
     "shell": "system"
+  },
+  {
+    "label": "Git Log",
+    "command": "git",
+    "args": ["lg"],
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
   }
 ]
