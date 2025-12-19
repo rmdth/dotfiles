@@ -105,7 +105,11 @@
     "bindings": {
       "ctrl-t": "workspace::NewTerminal",
       "ctrl-q": "pane::CloseActiveItem",
-      "ctrl-j": "workspace::ToggleBottomDock"
+      "ctrl-j": "workspace::ToggleBottomDock",
+      "alt-u": "terminal::ScrollPageUp",
+      "alt-d": "terminal::ScrollPageDown",
+      "alt-j": "terminal::ScrollLineDown",
+      "alt-k": "terminal::ScrollLineUp"
     }
   },
   {
