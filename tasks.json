@@ -94,7 +94,7 @@
   {
     "label": "Git Oops",
     "command": "git",
-    "args": ["oops"],
+    "args": ["commit", "--amend", "--no-edit"],
     "reveal": "no_focus",
     "hide": "on_success",
     "shell": "system"
