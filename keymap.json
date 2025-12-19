@@ -60,7 +60,9 @@
       "ctrl-g c": ["task::Spawn", { "task_name": "Git Commit" }],
       "ctrl-g p": ["task::Spawn", { "task_name": "Git Push" }],
       "ctrl-g U": ["task::Spawn", { "task_name": "Git Unadd All" }],
-      "ctrl-g o": ["task::Spawn", { "task_name": "Git Oops" }],
+      "ctrl-g o": ["task::Spawn", { "task_name": "Git Oops With Edit" }],
+      "ctrl-g O": ["task::Spawn", { "task_name": "Git Oops" }],
+      "ctrl-g l": ["task::Spawn", { "task_name": "Git Log" }],
       "ctrl-G a": "git::Add",
       "ctrl-G c": "git::Commit"
     }

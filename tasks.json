@@ -92,6 +92,14 @@
     "shell": "system"
   },
   {
+    "label": "Git Oops With Edit",
+    "command": "git",
+    "args": ["commit", "--amend"],
+    "reveal": "no_focus",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
     "label": "Git Oops",
     "command": "git",
     "args": ["commit", "--amend", "--no-edit"],
