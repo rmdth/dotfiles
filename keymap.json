@@ -21,16 +21,14 @@
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
-      "q": "vim::MiniQuotes",
-      "b": "vim::MiniBrackets"
+      "q": "vim::AnyQuotes",
+      "b": "vim::AnyBrackets"
     }
   },
   {
     "context": "Dock && !Terminal && !Editor || VimControl && !menu || EmptyPane || SharedScreen || Pane && !Editor && !Terminal",
     // Everywhere except insert, terminal and Dock while writing
     "bindings": {
-      "space w": "workspace::Save",
-      "space W": "workspace::SaveAll",
       "space p": "command_palette::Toggle",
       "space q": "pane::CloseActiveItem",
       "space Q": "pane::CloseAllItems",
@@ -39,6 +37,10 @@
       "space l": "vim::GoToTab",
       "space h": "vim::GoToPreviousTab",
       "space o": "projects::OpenRecent",
+      "space f": "file_finder::Toggle",
+      "space d": "diagnostics::Deploy",
+      "space w": "workspace::Save",
+      "space W": "workspace::SaveAll",
       "space O": "workspace::Open",
       "space n": "workspace::NewWindow",
       "space r": ["editor::SpawnNearestTask", { "reveal": "no_focus" }]
@@ -142,16 +144,17 @@
     }
   },
   {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown"
+    }
+  },
+  {
     "context": "VimControl && !menu",
     // Normal & visual mode.
     "bindings": {
       "g n": "editor::SelectNext"
-    }
-  },
-  {
-    "context": "vim_operator == c",
-    "bindings": {
-      "a": "editor::ToggleCodeActions" // Zed specific
     }
   },
   {
