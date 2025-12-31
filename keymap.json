@@ -147,7 +147,8 @@
     "context": "vim_mode == visual",
     "bindings": {
       "shift-k": "editor::MoveLineUp",
-      "shift-j": "editor::MoveLineDown"
+      "shift-j": "editor::MoveLineDown",
+      "shift-s": "vim::PushAddSurrounds"
     }
   },
   {
