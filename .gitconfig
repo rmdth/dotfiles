@@ -26,3 +26,4 @@
 	m = merge
 	pr = pull --rebase
 	ri = rebase -i
+	fix = commit --fixup
