@@ -90,7 +90,7 @@
       "inlay_hints": {
         "show_other_hints": true,
         "show_type_hints": false,
-        "show_parameter_hints": false,
+        "show_parameter_hints": true,
         "show_background": true,
         "show_value_hints": true,
         "enabled": true
