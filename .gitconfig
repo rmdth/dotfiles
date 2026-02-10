@@ -1,6 +1,7 @@
 [core]
-	editor = zed --wait
+	editor = vim
 	autocrlf = true
+	longpaths = true
 [user]
 	username = rmdth
 	email = 166089650+rmdth@users.noreply.github.com
@@ -24,3 +25,4 @@
 	unadd = reset HEAD --
 	m = merge
 	pr = pull --rebase
+	ri = rebase -i
