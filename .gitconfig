@@ -27,3 +27,5 @@
 	pr = pull --rebase
 	ri = rebase -i
 	fix = commit --fixup
+[rebase]
+	autosquash = true
