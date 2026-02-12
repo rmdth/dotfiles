@@ -21,7 +21,7 @@
 	cob = checkout -b
 	br = branch
 	last = log -1 HEAD
-	lg = "!git log --graph --abbrev-commit --decorate --color=always --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all | nl -w3 -s' '"
+	lg = "!git log --graph --abbrev-commit --decorate --color=always --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all | nl -w3 -s' ' | less -R"
 	unadd = reset HEAD --
 	m = merge
 	pr = pull --rebase
