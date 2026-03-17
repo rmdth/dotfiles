@@ -2,6 +2,7 @@
 	editor = vim
 	autocrlf = true
 	longpaths = true
+	pager = less -F -X
 [user]
 	username = rmdth
 	email = 166089650+rmdth@users.noreply.github.com
@@ -11,10 +12,12 @@
 	format = ssh
 [commit]
 	gpgsign = true
+	verbose = true
 [init]
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+	default = current
 [alias]
 	s = status
 	co = checkout
@@ -30,3 +33,18 @@
 	undo = reset HEAD~1
 [rebase]
 	autosquash = true
+	autoStash = true
+	updateRefs = true
+[fetch]
+	prune = true
+[pull]
+	rebase = true
+[diff]
+	algorithm = histogram
+	colorMoved = default
+	mnemonicPrefix = true
+	renames = true
+[merge]
+	conflictstyle = zdiff3
+[column]
+	ui = auto
