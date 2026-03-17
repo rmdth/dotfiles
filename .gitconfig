@@ -27,5 +27,6 @@
 	pr = pull --rebase
 	ri = rebase -i
 	fix = commit --fixup
+	undo = reset HEAD~1
 [rebase]
 	autosquash = true
