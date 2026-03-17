@@ -57,16 +57,18 @@
       "ctrl-t h": "workspace::ToggleLeftDock",
       "ctrl-t l": "workspace::ToggleRightDock",
       "ctrl-t j": "workspace::ToggleBottomDock",
+      "ctrl-g b": "git::Blame",
+      "ctrl-g s": "git::StageAndNext",
+      "ctrl-g S": "git::UnstageAndNext",
       "ctrl-g a": ["task::Spawn", { "task_name": "Git Add Current File" }],
       "ctrl-g A": ["task::Spawn", { "task_name": "Git Add All Files" }],
-      "ctrl-g c": ["task::Spawn", { "task_name": "Git Commit" }],
+      "ctrl-g c": "git::Commit",
       "ctrl-g p": ["task::Spawn", { "task_name": "Git Push" }],
-      "ctrl-g U": ["task::Spawn", { "task_name": "Git Unadd All" }],
+      "ctrl-g u": "git::UnstageAndNext",
+      "ctrl-g U": "git::UnstageAll",
       "ctrl-g o": ["task::Spawn", { "task_name": "Git Oops With Edit" }],
       "ctrl-g O": ["task::Spawn", { "task_name": "Git Oops" }],
-      "ctrl-g l": ["task::Spawn", { "task_name": "Git Log" }],
-      "ctrl-G a": "git::Add",
-      "ctrl-G c": "git::Commit"
+      "ctrl-g l": ["task::Spawn", { "task_name": "Git Log" }]
     }
   },
   {
@@ -74,7 +76,7 @@
     "bindings": {
       "ctrl-space h": "pane::ActivatePreviousItem",
       "ctrl-space l": "pane::ActivateNextItem",
-      "ctrl-q": "pane::CloseActiveItem"
+      "ctrl-space q": "pane::CloseActiveItem"
     }
   },
   {
@@ -99,9 +101,9 @@
       "r": "project_panel::Rename",
       "d": "project_panel::Trash",
       "x": "project_panel::Cut",
-      "c": "project_panel::Copy",
+      "y": "project_panel::Copy",
       "p": "project_panel::Paste",
-      "l": "project_panel::OpenPermanent"
+      "l": "project_panel::Open"
     }
   },
   {
@@ -159,7 +161,7 @@
     }
   },
   {
-    "context": "Editor || menu",
+    "context": "Editor || menu || Terminal",
     "bindings": {
       "ctrl-j": "menu::SelectNext",
       "ctrl-k": "menu::SelectPrevious",
